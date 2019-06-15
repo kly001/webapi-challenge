@@ -24,15 +24,30 @@ In this challenge, create a web API around the following resources: `Projects` a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
+--------------------------------------------------------------------------------------
 - [ ] Mention two parts of Express that you learned about this week.
+        Express is a web application for Node.js that is used to design single-page applications.  It is simple, unopinionated, lightweight and compatible with connect middleware.
+-----------------------------------------------------------------------------------------
 
 - [ ] Describe Middleware?
+    Middleware are functions that have access to the request object(req) the response object(res) and the next function in an application's request-response cycle.
+    
+------------------------------------------------------------------------------------------
 
 - [ ] Describe a Resource?
+    A resource is the data that can be found at a given web address.
+
+------------------------------------------------------------------------------------------
 
 - [ ] What can the API return to help clients know if a request was successful?
+    An API can return either a success message or the data requested to help clients know if a request was successful.
+
+------------------------------------------------------------------------------------------
 
 - [ ] How can we partition our application into sub-applications?
+    We can partition our application into sub-applications using Express Router and setting up separate route handling methods.
+
+-------------------------------------------------------------------------------------------
 
 ## Project Setup
 
