@@ -14,10 +14,5 @@ server.use(logger("dev"));
 server.use('/api/projects',projectRouter);
 server.use('/api/actions', actionRouter);
 
-server.get('/', (req, res) => {
-  res.send(`
-    <h2>WEB API Sprint Challenge</h2>
-  `);
-});
 
 module.exports = server

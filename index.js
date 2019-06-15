@@ -17,6 +17,11 @@ const port = process.env.PORT ||3456;
 
 const server = express();
 
+server.get('/', (req, res) => {
+  res.send("WEB API Sprint Challenge")
+});
+
+
 server.listen(port, () => {
     console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
   });
