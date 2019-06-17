@@ -1,11 +1,9 @@
 const express = require('express');
 const Actions = require('../helpers/actionModel.js');
-console.log(Actions)
+// console.log(Actions)
 const router = express.Router();
 
 router.use(express.json())
-
-
 
 
 router.get("/", async(req, res) => {

@@ -1,6 +1,6 @@
 const express = require('express');
 const Projects = require('../helpers/projectModel.js');
-console.log(Projects)
+// console.log(Projects)
 const router = express.Router();
 
 router.use(express.json());
