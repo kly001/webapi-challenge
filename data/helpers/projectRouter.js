@@ -1,5 +1,6 @@
 const express = require('express');
-const Projects = require('./data/helpers/projectModel.js');
+const Projects = require('../helpers/projectModel.js');
+console.log(Projects)
 const router = express.Router();
 
 router.use(express.json());
@@ -8,6 +9,7 @@ router.use(express.json());
 router.get('/', async (req, res) => {
     try {
       const project = await Projects.get(req.query);
+      console.log(project)
       res.status(200).json(project);
     } catch (error) {
       console.log(error);
@@ -17,7 +19,7 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.get('/:id', async (req, res) => {
+  router.get('/:id', async(req, res) => {
     try {
       const projectId = await Projects.get(req.query);
       res.status(200).json(projectId);
@@ -29,7 +31,7 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.post('/', async (req, res) => {
+  router.post('/', async(req, res) => {
     try {
       const newProject = await Projects.add(req.body);
       res.status(201).json(newProject);
@@ -41,7 +43,7 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.put('/:id', async (req, res) => {
+  router.put('/:id', async(req, res) => {
     try {
       const updateProject = await Projects.update(req.params.id, req.body);
       if (updateProject) {
@@ -57,7 +59,7 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.delete('/:id', async (req, res) => {
+  router.delete('/:id', async(req, res) => {
     try {
       const deleteProject = await Projects.remove(req.params.id);
       if (deleteProject > 0) {
@@ -79,4 +81,4 @@ router.get('/', async (req, res) => {
   
 
 
-module.export = router
+module.exports = router
