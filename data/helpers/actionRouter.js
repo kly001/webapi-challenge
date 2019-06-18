@@ -21,7 +21,7 @@ router.get("/", async(req, res) => {
           const newAction = await Actions.insert(req.body);
           res.status(201).json(newAction)
       } catch (error) {
-          res.status(500).json({essage: "Error posting actions"});
+          res.status(500).json({message: "Error posting actions"});
       }
   });
 
